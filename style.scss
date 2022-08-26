@@ -1,0 +1,81 @@
+// colors
+$main-dark: #1e212d;
+$main-light: #faf3e0;
+$secondary-dark: #6870e0;
+$secondary-light: #acb4f4;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  font-size: 62.5%;
+}
+// Mobile-first styles
+body {
+  font-family: Verdana, "Geneva", Tahoma, sans-serif;
+  background-color: $secondary-dark;
+}
+header {
+  height: 15vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $main-dark;
+  margin-bottom: 2rem;
+  img {
+    width: 4rem;
+  }
+  h1 {
+    color: $secondary-dark;
+    font-size: 2.5rem;
+    font-weight: 600;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  }
+}
+form {
+  height: 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  input {
+    border-radius: 6px;
+    height: 3rem;
+    width: 60%;
+    background-color: $secondary-light;
+    outline: none;
+    border: none;
+    margin-right: 2%;
+    margin-bottom: 1rem;
+  }
+  button {
+    color: $main-light;
+    background-color: $main-dark;
+    height: 3rem;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.5rem;
+    padding: 0 0.5rem;
+  }
+}
+main {
+  width: 80%;
+  border-radius: 5px;
+  margin: 5rem auto;
+  padding: 2rem;
+  text-align: center;
+  background-color: $main-dark;
+  color: $main-light;
+  .location {
+    color: $secondary-light;
+    font-size: 2rem;
+    margin-bottom: 5rem;
+  }
+  p {
+    margin: 1rem 0;
+    font-size: 2rem;
+    line-height: 3rem;
+  }
+}
