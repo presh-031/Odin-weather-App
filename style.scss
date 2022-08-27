@@ -1,8 +1,8 @@
 // colors
-$main-dark: #1e212d;
-$main-light: #faf3e0;
-$secondary-dark: #6870e0;
-$secondary-light: #acb4f4;
+$main-dark: #1a1e2b;
+$main-light: #efe9da;
+$secondary-dark: #868ce1;
+$secondary-light: #b6bdf6;
 * {
   padding: 0;
   margin: 0;
@@ -39,36 +39,41 @@ form {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
   input {
     border-radius: 6px;
-    height: 3rem;
+    height: 4rem;
     width: 60%;
+    max-width: 400px;
     background-color: $secondary-light;
     outline: none;
     border: none;
-    margin-right: 2%;
     margin-bottom: 1rem;
+    padding-left: 1.5rem;
   }
   button {
     color: $main-light;
     background-color: $main-dark;
-    height: 3rem;
     border: none;
     border-radius: 6px;
     font-size: 1.5rem;
-    padding: 0 0.5rem;
+    padding: 1rem 3rem;
   }
+}
+.main-container {
+  display: grid;
+  place-items: center;
 }
 main {
   width: 80%;
+  max-width: 400px;
   border-radius: 5px;
   margin: 5rem auto;
   padding: 2rem;
   text-align: center;
   background-color: $main-dark;
   color: $main-light;
-  .location {
+  .location,
+  .location-country {
     color: $secondary-light;
     font-size: 2rem;
     margin-bottom: 5rem;
@@ -77,5 +82,17 @@ main {
     margin: 1rem 0;
     font-size: 2rem;
     line-height: 3rem;
+  }
+}
+footer {
+  padding: 1rem;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  color: $main-light;
+  font-size: 1.5rem;
+  a {
+    color: inherit;
   }
 }

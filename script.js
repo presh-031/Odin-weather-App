@@ -1,7 +1,18 @@
 "use strict";
+// Initially, main should be hidden
+document.querySelector(".main").style.display = "none";
 
+// When submit btn is clicked, the action starts
 const go = document.querySelector("button");
 go.addEventListener("click", getInput);
+
+// pressing enter should also start the action
+document.addEventListener("keydown", (e) => {
+  console.log(e.key);
+  if (e.key === "Enter") {
+    getInput();
+  }
+});
 
 function getInput() {
   let userInput = document.querySelector("input").value.toLowerCase();
@@ -12,7 +23,7 @@ function getInput() {
 function getLocation(input) {
   const url = `http://api.openweathermap.org/geo/1.0/direct?q=${input}&limit=5&appid=6658b5987a716f929da6227307c0bafd`;
   fetch(url)
-    .then((res) => res.json()) //pase response as JSON
+    .then((res) => res.json()) //parse response as JSON
     .then((data) => {
       // console.log(data);
       console.log(data[0].lat);
@@ -31,14 +42,12 @@ function getWeatherInfo(lat, lon) {
   fetch(url)
     .then((res) => res.json()) //parse response as JSON
     .then((data) => {
-      // console.log(data);
-      // console.log(data.name);
-      // console.log(data.main.temp);
-      // console.log(data.main.feels_like);
-      // console.log(data.main.humidity);
-      // console.log(data.wind.speed);
+      // showing main container when data returns
+      document.querySelector(".main").style.display = "block";
+
       // updating dom with returned data
       document.querySelector(".location").innerHTML = data.name;
+      document.querySelector(".location-country").innerHTML = data.sys.country;
       document.querySelector(".temp").innerHTML = data.main.temp;
       document.querySelector(".feels-like").innerHTML = data.main.feels_like;
       document.querySelector(".humidity").innerHTML = data.main.humidity;

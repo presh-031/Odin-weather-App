@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather App</title>
+    <!-- Logo?? -->
     <link rel="stylesheet" href="css/style.css" />
-    <script src="https://kit.fontawesome.com/8a6d734775.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <header>
@@ -16,18 +16,20 @@
       <h1>Weather App</h1>
     </header>
     <form>
-      <input type="text" />
+      <input type="text" placeholder="Enter city name..." />
       <button type="button">Search</button>
     </form>
-    <main class="main">
-      <p class="location">fkdfjhbfwjh</p>
-      <p>Temp : <span class="temp"> 21.33</span>C</p>
-      <p>Feels like : <span class="feels-like">22.08</span>C</p>
-      <p>Humidity <span class="humidity">98</span>%</p>
-      <p>Wind : <span class="wind">1.93</span>m/s</p>
-    </main>
+    <div class="main-container">
+      <main class="main">
+        <p><span class="location"></span> <span class="location-country"></span></p>
+        <p>Temp : <span class="temp"></span>C</p>
+        <p>Feels like : <span class="feels-like"></span>C</p>
+        <p>Humidity : <span class="humidity"></span>%</p>
+        <p>Wind : <span class="wind"></span>m/s</p>
+      </main>
+    </div>
     <footer>
-      <p>-coded by</p>
+      <p>-coded by <a href="http://www.twitter.com/presh_031 " target="_blank">presh-031</a></p>
     </footer>
     <script src="script.js"></script>
   </body>
