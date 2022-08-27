@@ -4,23 +4,17 @@
 const go = document.querySelector("button");
 go.addEventListener("click", getInput);
 
-// pressing enter should also start the action
-// document.addEventListener("keydown", (e) => {
-//   console.log(e.key);
-//   if (e.key === "Enter") {
-//     getInput();
-//   }
-// });
-
 // radioBtn for temp Conversion used later
 const radioBtn = document.querySelector("#convert");
 
 function getInput() {
   let userInput = document.querySelector("input").value.toLowerCase();
-  getLocation(userInput);
 
-  // Show loading spinner
-  document.querySelector(".loader").style.display = "block";
+  // Fetch and show loading spinner only if input field is not empty
+  if (userInput) {
+    getLocation(userInput);
+    document.querySelector(".loader").style.display = "block";
+  }
 }
 
 function getLocation(input) {
@@ -29,8 +23,8 @@ function getLocation(input) {
     .then((res) => res.json()) //parse response as JSON
     .then((data) => {
       // console.log(data);
-      console.log(data[0].lat);
-      console.log(data[0].lon);
+      // console.log(data[0].lat);
+      // console.log(data[0].lon);
 
       // With the lat and long data that comes back, well call the  getWeatherInfo function
       // This is simply due to how this api works, info which i got to know by READING THE DOCS!
