@@ -52,8 +52,17 @@ function getWeatherInfo(lat, lon) {
       document.querySelector(".feels-like").innerHTML = data.main.feels_like;
       document.querySelector(".humidity").innerHTML = data.main.humidity;
       document.querySelector(".wind").innerHTML = data.wind.speed;
+
+      // calling the convert function after initial results have displayed
+      convert(data.main.temp, data.main.feels_like);
     })
     .catch((err) => {
       console.log(`error ${err}`);
     });
+}
+
+// Checking the radio should convert to farenheit
+function convert(temp, feelsLike) {
+  console.log(temp, feelsLike);
+  // If radio is checked, convert to farenheit
 }
