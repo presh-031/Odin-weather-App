@@ -1,6 +1,4 @@
 "use strict";
-// Initially, main should be hidden
-// document.querySelector(".main").style.display = "none";
 
 // When submit btn is clicked, the action starts
 const go = document.querySelector("button");
@@ -14,13 +12,15 @@ go.addEventListener("click", getInput);
 //   }
 // });
 
-// radioBtn for temp Conversion
+// radioBtn for temp Conversion used later
 const radioBtn = document.querySelector("#convert");
 
 function getInput() {
   let userInput = document.querySelector("input").value.toLowerCase();
-  console.log(userInput);
   getLocation(userInput);
+
+  // Show loading spinner
+  document.querySelector(".loader").style.display = "block";
 }
 
 function getLocation(input) {
@@ -46,8 +46,9 @@ function getWeatherInfo(lat, lon) {
   fetch(url)
     .then((res) => res.json()) //parse response as JSON
     .then((data) => {
-      // showing main container when data returns
+      // showing main container when data returns and hide loading spinner
       document.querySelector(".main").style.visibility = "visible";
+      document.querySelector(".loader").style.display = "none";
 
       // updating dom with returned data
       document.querySelector(".location").innerHTML = data.name;

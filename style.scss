@@ -15,6 +15,7 @@ $secondary-light: #b6bdf6;
 body {
   font-family: Verdana, "Geneva", Tahoma, sans-serif;
   background-color: $secondary-dark;
+  max-height: 100vh;
 }
 header {
   height: 15vh;
@@ -64,6 +65,26 @@ form {
   display: grid;
   place-items: center;
 }
+// loading spinner styles
+.loader {
+  border: 16px solid $secondary-light;
+  border-top: 16px solid $main-dark;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  margin-top: 10rem;
+  animation: spin 2s linear infinite;
+  display: none;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 main {
   width: 80%;
   max-width: 400px;
@@ -85,7 +106,7 @@ main {
     font-size: 2rem;
     line-height: 3rem;
   }
-  // Temp conversion styles
+  // Temp conversion area styles
   label {
     display: flex;
     align-items: center;
