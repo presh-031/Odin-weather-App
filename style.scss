@@ -50,6 +50,8 @@ form {
     border: none;
     margin-bottom: 1rem;
     padding-left: 1.5rem;
+    color: $main-dark;
+    font-size: 1.5rem;
   }
   button {
     color: $main-light;
@@ -95,6 +97,7 @@ main {
   text-align: center;
   background-color: $main-dark;
   color: $main-light;
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2);
   .location,
   .location-country {
     color: $secondary-light;
@@ -117,6 +120,9 @@ main {
     margin-top: 5rem;
     display: inline-block;
     cursor: pointer;
+    input {
+      cursor: pointer;
+    }
   }
 }
 footer {
