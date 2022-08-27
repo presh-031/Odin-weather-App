@@ -86,9 +86,17 @@ main {
     line-height: 3rem;
   }
   // Temp conversion styles
-}
-.unit {
-  outline: 1px solid red;
+  label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 0.5rem;
+    color: $secondary-light;
+    font-size: 1.5rem;
+    margin-top: 5rem;
+    display: inline-block;
+    cursor: pointer;
+  }
 }
 footer {
   padding: 1rem;
