@@ -1,18 +1,18 @@
 "use strict";
 // Initially, main should be hidden
-document.querySelector(".main").style.display = "none";
+// document.querySelector(".main").style.display = "none";
 
 // When submit btn is clicked, the action starts
 const go = document.querySelector("button");
 go.addEventListener("click", getInput);
 
 // pressing enter should also start the action
-document.addEventListener("keydown", (e) => {
-  console.log(e.key);
-  if (e.key === "Enter") {
-    getInput();
-  }
-});
+// document.addEventListener("keydown", (e) => {
+//   console.log(e.key);
+//   if (e.key === "Enter") {
+//     getInput();
+//   }
+// });
 
 function getInput() {
   let userInput = document.querySelector("input").value.toLowerCase();
@@ -43,7 +43,7 @@ function getWeatherInfo(lat, lon) {
     .then((res) => res.json()) //parse response as JSON
     .then((data) => {
       // showing main container when data returns
-      document.querySelector(".main").style.display = "block";
+      document.querySelector(".main").style.visibility = "visible";
 
       // updating dom with returned data
       document.querySelector(".location").innerHTML = data.name;

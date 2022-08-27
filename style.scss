@@ -57,6 +57,7 @@ form {
     border-radius: 6px;
     font-size: 1.5rem;
     padding: 1rem 3rem;
+    cursor: pointer;
   }
 }
 .main-container {
@@ -69,6 +70,7 @@ main {
   border-radius: 5px;
   margin: 5rem auto;
   padding: 2rem;
+  visibility: hidden;
   text-align: center;
   background-color: $main-dark;
   color: $main-light;
@@ -86,10 +88,8 @@ main {
 }
 footer {
   padding: 1rem;
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translate(-50%, 50%);
+  display: grid;
+  place-items: center;
   color: $main-light;
   font-size: 1.5rem;
   a {
