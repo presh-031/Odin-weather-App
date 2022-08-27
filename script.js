@@ -69,8 +69,8 @@ function convert(temp, feelsLike) {
 
   // If checkbox is checked, display farenheit values, else display the original celcius values.
   if (radioBtn.checked) {
-    document.querySelector(".temp").innerHTML = Math.round(tempInFarenheit);
-    document.querySelector(".feels-like").innerHTML = Math.round(feelsLikeInFarenheit);
+    document.querySelector(".temp").innerHTML = tempInFarenheit.toFixed(2);
+    document.querySelector(".feels-like").innerHTML = feelsLikeInFarenheit.toFixed(2);
     document.querySelector(".unit-1").innerHTML = "&deg;F";
     document.querySelector(".unit-2").innerHTML = "&deg;F";
   } else {
