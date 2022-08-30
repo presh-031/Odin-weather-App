@@ -16,9 +16,9 @@ function getInput() {
     document.querySelector(".loader").style.display = "block";
   }
 }
-
 function getLocation(input) {
-  const url = `http://api.openweathermap.org/geo/1.0/direct?q=${input}&limit=5&appid=6658b5987a716f929da6227307c0bafd`;
+  // http in api's doc
+  const url = `https://api.openweathermap.org/geo/1.0/direct?q=${input}&limit=5&appid=6658b5987a716f929da6227307c0bafd`;
   fetch(url)
     .then((res) => res.json()) //parse response as JSON
     .then((data) => {
