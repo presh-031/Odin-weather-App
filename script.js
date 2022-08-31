@@ -4,6 +4,14 @@
 const go = document.querySelector("button");
 go.addEventListener("click", getInput);
 
+// Pressing enter should also start the action
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Enter") {
+    e.preventDefault();
+    getInput();
+  }
+});
+
 // radioBtn for temp Conversion used later
 const radioBtn = document.querySelector("#convert");
 
