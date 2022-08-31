@@ -41,7 +41,7 @@ Weather app created with html, scss and Javascript.
 
 ## How to use
 
-- Simply input your city's name in the input field and click the 'Search' button
+- Simply input your city's name in the input field and click the 'Search' button OR press 'Enter'
 - Use the checkbox that appears to convert temperature from Celcius to Farenheit, as you want.
 
 ## Contact
